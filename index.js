@@ -2,9 +2,9 @@
  * Created by asher on 16-7-19.
  */
 var nodemailer = require('nodemailer');
-
+var config=require("./config");
 // create reusable transporter object using the default SMTP transport
-var transporter = nodemailer.createTransport('smtp://heavenduke%40heavenduke.com:940815cc.,@heavenduke.com');
+var transporter = nodemailer.createTransport(config.conn_str);
 
 // setup e-mail data with unicode symbols
 var mailOptions = {
